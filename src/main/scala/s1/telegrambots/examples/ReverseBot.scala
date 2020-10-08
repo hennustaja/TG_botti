@@ -19,16 +19,17 @@ object ReverseBot extends App {
 
   // lista paivista jenkkimuodossa "kk-pv". Voidaan viel muokata jos halutaan.
 
-  val namedays = Map("01-01" -> "","01-02" -> "Aapeli","01-03" -> Vector("Elmeri","Elmo","Elmer")
+  val namedays = Map("01-01" -> List(),"01-02" -> List("Aapeli"),"01-03" -> List("Elmeri","Elmo","Elmer")
+
   ,
-  "01-04" ->
-    "Ruut"
+  "01-04" -> List(
+    "Ruut")
   ,
-  "01-05" ->
-    "Lea,Leea"
+  "01-05" -> List(
+    "Lea","Leea")
   ,
-  "01-06" ->
-    "Harri"
+  "01-06" -> List(
+    "Harri")
   ,
   "01-07" ->
     List("Aukusti","Aku","August")
@@ -39,24 +40,24 @@ object ReverseBot extends App {
   "01-09" ->
     List("Veijo","VeikkoVeli")
   ,
-  "01-10" ->
-    "Nyyrikki"
+  "01-10" -> List(
+    "Nyyrikki")
   ,
   "01-11" ->
     List("Kari","Karri")
   ,
-  "01-12" ->
-    "Toini"
+  "01-12" ->List(
+    "Toini")
   ,
-  "01-13" ->
-    "Nuutti"
+  "01-13" -> List(
+    "Nuutti")
  ,
   "01-14" ->
     List("Sakari",
     "Saku")
   ,
-  "01-15" ->
-    "Solja"
+  "01-15" -> List(
+    "Solja")
   ,
   "01-16" ->
     List("Ilmari",
@@ -65,8 +66,8 @@ object ReverseBot extends App {
   "01-17" ->
     List("Anton","Antto","Anttoni","Toni")
   ,
-  "01-18" ->
-    "Laura"
+  "01-18" -> List(
+    "Laura")
   ,
   "01-19" ->
     List("Heikki",
@@ -84,16 +85,16 @@ object ReverseBot extends App {
     "Auni",
     "Oona")
   ,
-  "01-22" ->
-    "Visa"
+  "01-22" -> List(
+    "Visa")
   ,
   "01-23" -> List(
     "Eine",
     "Eini",
-    "Enni")
+    "Enni"))/*
   ,
-  "01-24" ->
-    "Senja"
+  "01-24" -> List(
+    "Senja")
   ,
   "01-25" -> List(
     "Paavali",
@@ -101,11 +102,11 @@ object ReverseBot extends App {
     "Paul",
     "Pauli")
   ,
-  "2013-01-26" ->
-    "Joonatan"
+  "2013-01-26" ->List(
+    "Joonatan")
   ,
-  "01-27" ->
-    "Viljo"
+  "01-27" -> List(
+    "Viljo")
   ,
   "-01-28" -> List(
     "Kaarle",
@@ -113,32 +114,32 @@ object ReverseBot extends App {
     "Kalle",
     "Mies")
   ,
-  "01-29" ->
-    "Valtteri"
+  "01-29" -> List(
+    "Valtteri")
   ,
-  "01-30" ->
-    "Irja"
+  "01-30" -> List(
+    "Irja")
   ,
-  "01-31" ->
-    "Alli"
+  "01-31" -> List(
+    "Alli")
   ,
-  "02-01" ->
-    "Riitta"
+  "02-01" -> List(
+    "Riitta")
   ,
   "02-02" ->List(
     "Aamu",
     "Jemina",
     "Lumi")
   ,
-  "02-03" ->
-    "Valo"
+  "02-03" -> List(
+    "Valo")
   ,
   "02-04" -> List(
     "Armi",
     "Ronja")
   ,
-  "02-05" ->
-    "Asser"
+  "02-05" -> List(
+    "Asser")
   ,
   "02-06" -> List(
     "Tea",
@@ -151,8 +152,8 @@ object ReverseBot extends App {
     "Rikhard",
     "Riku")
   ,
-  "02-08" ->
-    "Laina"
+  "02-08" -> List(
+    "Laina")
   ,
   "02-09" -> List(
     "Raija",
@@ -164,8 +165,8 @@ object ReverseBot extends App {
     "Ellen",
     "Elna")
   ,
-  "02-11" ->
-    "Talvikki"
+  "02-11" -> List(
+    "Talvikki")
   ,
   "02-12" -> List(
     "Elma",
@@ -184,8 +185,8 @@ object ReverseBot extends App {
     "Sipi",
     "Sippo"
   ),
-  "02-16" ->
-    "Kai"
+  "02-16" -> List(
+    "Kai")
   ,
   "02-17" -> List(
     "Karita",
@@ -193,11 +194,11 @@ object ReverseBot extends App {
     "Väinäm",
     "Väinö")
   ,
-  "02-18" ->
-    "Kaino"
+  "02-18" -> List(
+    "Kaino")
   ,
-  "02-19" ->
-    "Eija"
+  "02-19" -> List(
+    "Eija")
   ,
   "02-20" -> List(
     "Heljä",
@@ -205,8 +206,8 @@ object ReverseBot extends App {
     "Heli",
     "Helinä")
   ,
-  "02-21" ->
-    "Keijo"
+  "02-21" -> List(
+    "Keijo")
   ,
   "02-22" -> List(
     "Hilda",
@@ -214,8 +215,8 @@ object ReverseBot extends App {
     "Tuulia",
     "Tuulikki"
   ),
-  "02-23" ->
-    "Aslak"
+  "02-23" -> List(
+    "Aslak")
   ,
   "02-24" -> List(
     "Matias",
@@ -225,14 +226,14 @@ object ReverseBot extends App {
     "Tuija",
     "Tuire"
   ),
-  "02-26" ->
-    "Nestori"
+  "02-26" -> List(
+    "Nestori")
   ,
-  "02-27" ->
-    "Torsti"
+  "02-27" -> List(
+    "Torsti")
   ,
-  "02-28" ->
-    "Onni"
+  "02-28" -> List(
+    "Onni")
   ,
   "03-01" -> List(
     "Alpo",
@@ -244,8 +245,8 @@ object ReverseBot extends App {
     "Fanni",
     "Virva"
   ),
-  "03-03" ->
-    "Kauko"
+  "03-03" -> List(
+    "Kauko")
   ,
   "03-04" -> List(
     "Ari",
@@ -256,26 +257,26 @@ object ReverseBot extends App {
     "Laila",
     "Leila"
   ),
-  "03-06" ->
-    "Tarmo"
+  "03-06" -> List(
+    "Tarmo")
   ,
   "03-07" -> List(
     "Tarja",
     "Taru"
   ),
-  "03-08" ->
-    "Vilppu"
+  "03-08" -> List(
+    "Vilppu")
   ,
-  "03-09" ->
-    "Auvo"
+  "03-09" -> List(
+    "Auvo")
   ,
   "03-10" -> List(
     "Aurora",
     "Aura",
     "Auri"
   ),
-  "03-11" ->
-    "Kalervo"
+  "03-11" -> List(
+    "Kalervo")
   ,
   "03-12" -> List(
     "Reijo",
@@ -291,11 +292,11 @@ object ReverseBot extends App {
     "Tilda",
     "Mette"
   ),
-  "03-15" ->
-    "Risto"
+  "03-15" -> List(
+    "Risto")
   ,
-  "03-16" ->
-    "Ilkka"
+  "03-16" -> List(
+    "Ilkka")
   ,
   "03-17" -> List(
     "Kerttu",
@@ -317,14 +318,14 @@ object ReverseBot extends App {
     "Joakim",
     "Kim"
   ),
-  "03-21" ->
-    "Pentti"
+  "03-21" -> List(
+    "Pentti")
   ,
-  "03-22" ->
-    "Vihtori"
+  "03-22" -> List(
+    "Vihtori")
   ,
-  "03-23" ->
-    "Akseli"
+  "03-23" -> List(
+    "Akseli")
   ,
   "03-24" -> List(
     "Gabriel",
@@ -332,8 +333,8 @@ object ReverseBot extends App {
     "Kaapro",
     "Kaapo"
   ),
-  "03-25" ->
-    "Aija"
+  "03-25" -> List(
+    "Aija")
   ,
   "03-26" -> List(
     "Immanuel",
@@ -345,8 +346,8 @@ object ReverseBot extends App {
     "Saul",
     "Sauli"
   ),
-  "03-28" ->
-    "Armas"
+  "03-28" -> List(
+    "Armas")
   ,
   "03-29" -> List(
     "Joonas",
@@ -355,8 +356,8 @@ object ReverseBot extends App {
     "Jonni",
     "Jonne"
   ),
-  "03-30" ->
-    "Usko"
+  "03-30" -> List(
+    "Usko")
   ,
   "03-31" -> List(
     "Irma",
@@ -366,14 +367,14 @@ object ReverseBot extends App {
     "Pulmu",
     "Raita"
   ),
-  "04-02" ->
-    "Pellervo"
+  "04-02" -> List(
+    "Pellervo")
   ,
-  "04-03" ->
-    "Sampo"
+  "04-03" -> List(
+    "Sampo")
   ,
-  "04-04" ->
-    "Ukko"
+  "04-04" -> List(
+    "Ukko")
   ,
   "04-05" -> List(
     "Ira",
@@ -414,11 +415,11 @@ object ReverseBot extends App {
     "Juliaana",
     "Julius"
   ),
-  "04-13" ->
-    "Tellervo"
+  "04-13" -> List(
+    "Tellervo")
   ,
-  "04-14" ->
-    "Taito"
+  "04-14" -> List(
+    "Taito")
   ,
   "04-15" -> List(
     "Lina",
@@ -428,8 +429,8 @@ object ReverseBot extends App {
     "Jalo",
     "Patrik"
   ),
-  "04-17" ->
-    "Otto"
+  "04-17" -> List(
+    "Otto")
   ,
   "04-18" -> List(
     "Valdemar",
@@ -541,7 +542,7 @@ object ReverseBot extends App {
   "05-14" ->
     "Tuula"
   ,
-  "05-15" -> List(
+  "05-15" -> Vector(
     "Sinja",
     "Sofia",
     "Sohvi")
@@ -557,8 +558,8 @@ object ReverseBot extends App {
     "Rebekka",
     "Mailis",
     "Maila"
-  ))/*,
-  "2013-05-18": [
+  ),
+ "2013-05-18": [
     "Eero",
     "Erkki",
     "Eerika",
@@ -1543,7 +1544,10 @@ object ReverseBot extends App {
     this.run()
 
     println("Started")
-    println(namedays("03-23"))
+      val kissa = namedays("01-03")
+     for (x <- kissa) {
+       println(x)
+     }
   }
 
 
